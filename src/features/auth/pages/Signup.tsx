@@ -52,7 +52,6 @@ export function Signup() {
   const goBack = () => setStep(1);
 
   return (
-    <AuthLayout>
       <div className="w-full max-w-md bg-white rounded-none sm:rounded-xl">
 
         <h2 className="text-2xl sm:text-3xl font-semibold mb-2">
@@ -190,6 +189,5 @@ export function Signup() {
           </Link>
         </p>
       </div>
-    </AuthLayout>
   );
 }

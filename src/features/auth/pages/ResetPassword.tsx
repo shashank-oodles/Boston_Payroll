@@ -31,10 +31,10 @@ export function ResetPassword() {
     const onSubmit = async (data: ResetFormValues) => {
         console.log("Login data:", data);
         // call login API here
+        navigate("/password-updated");
     };
 
     return (
-        <AuthLayout>
             <div className="w-full max-w-md bg-white">
                 <button onClick={() => navigate(-1)}>
                     <FaArrowLeft className="text-gray-900 cursor-pointer" />
@@ -102,6 +102,5 @@ export function ResetPassword() {
                     </form>
                 </div>
             </div>
-        </AuthLayout>
     );
 }

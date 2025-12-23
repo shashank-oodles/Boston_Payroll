@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Stats() {
     return (
-        <div className="mb-16 w-full px-4">
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-6 max-w-6xl mx-auto">
+        <div className="absolute right-0 mb-16 w-full px-4 h-60">
+            <div className="flex flex-col relative lg:flex-row justify-between items-center gap-4 lg:gap-6 max-w-7xl mx-auto">
                 {/* Left Stats */}
-                <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 w-full max-w-sm">
+                <div className="absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 top-5">
                     <div className="flex items-center space-x-3 mb-2">
                         <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#EC6016' }}>
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -18,7 +18,7 @@ export default function Stats() {
                 </div>
 
                 {/* User Avatars */}
-                <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full max-w-sm">
+                <div className="flex flex-col mx-auto sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full max-w-sm">
                     <div className="flex -space-x-2">
                         <img src="/1b7d48eeafdcfffc16a92d0fedc4eba355930a84.png" alt="User 1" className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white shadow-sm object-cover" />
                         <img src="/bfb13bc29e04a248ef089f1c961a2428333eafaa.png" alt="User 2" className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white shadow-sm object-cover" />
@@ -29,7 +29,7 @@ export default function Stats() {
                 </div>
 
                 {/* Right Stats */}
-                <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 w-full max-w-sm">
+                <div className="absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 right-2 top-5">
                     <div className="text-center lg:text-right">
                         <div className="flex items-center justify-center lg:justify-end space-x-2 text-sm text-gray-500 mb-1">
                             <span>1-2 Day Deposits</span>

@@ -14,7 +14,6 @@ export function OtpPage() {
     };
 
     return (
-        <AuthLayout>
             <div className="w-full max-w-md bg-white">
                 <button onClick={() => navigate(-1)}>
                     <FaArrowLeft className="text-gray-900 cursor-pointer" />
@@ -25,6 +24,5 @@ export function OtpPage() {
                     Enter the below details to reset your password.
                 </p>
                 <OtpForm onSubmit={handleOtpSubmit} />
-            </div>
-        </AuthLayout >);
+            </div>);
 }

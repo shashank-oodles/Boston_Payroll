@@ -15,7 +15,7 @@ export function LandingPage (){
   return (
     <div className="min-h-screen bg-linear-to-br from-orange-50 to-pink-50 overflow-x-hidden">
       <Header />
-      <main className="px-4 sm:px-60 py-8 sm:py-12 overflow-x-hidden">
+      <main className="relative px-4 sm:px-60 py-8 sm:py-12 overflow-x-hidden">
         <Hero />
         <Stats />
         <FeatureCards />

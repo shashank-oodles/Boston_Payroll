@@ -31,7 +31,6 @@ export function ForgotPassword() {
     };
 
     return (
-        <AuthLayout>
             <div className="w-full max-w-md bg-white">
                 <button onClick={()=>navigate(-1)}>
                     <FaArrowLeft className="text-gray-900 cursor-pointer"/>
@@ -70,6 +69,5 @@ export function ForgotPassword() {
                     </form>
                 </div>
             </div>
-        </AuthLayout>
     );
 }

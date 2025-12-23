@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 
-export default function AuthLayout({ children }: { children: ReactNode }) {
+export default function AuthLayout() {
   return (
     <div className="flex flex-col lg:grid lg:grid-cols-2 bg-gradient-to-b from-[#461d00] to-[#ffffff] lg:bg-none lg:bg-[#FFDBB8]">
 
@@ -43,7 +44,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
 
       {/* RIGHT / FORM SECTION */}
       <div className="flex lg:gap-none lg:items-center w-full rounded-t-3xl lg:rounded-none bg-white items-start lg:items-center justify-center px-4 py-6 mt-7 lg:mt-0 lg:p-6">
-        {children}
+        <Outlet />
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import { Link } from "react-router";
 export function PasswordUpdated() {
 
     return (
-        <AuthLayout>
             <div className="w-full max-w-md bg-white">
                 <div className="flex flex-col items-center border-[#E2E8F0] rounded-lg shadow-md p-6">
                     <FaCheckCircle className="text-green-500 text-4xl mb-4" />
@@ -23,6 +22,5 @@ export function PasswordUpdated() {
                     </Link>
                 </div>
             </div>
-        </AuthLayout>
     );
 }

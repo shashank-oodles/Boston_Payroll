@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import AuthLayout from "../layouts/AuthLayout";
 import { Input } from "../../shared";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
@@ -29,7 +28,6 @@ export function Login() {
   };
 
   return (
-    <AuthLayout>
       <div className="w-full max-w-md rounded-none sm:rounded-xl bg-white">
 
         {/* Heading */}
@@ -132,6 +130,5 @@ export function Login() {
           </Link>
         </p>
       </div>
-    </AuthLayout>
   );
 }
