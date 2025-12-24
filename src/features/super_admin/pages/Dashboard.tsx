@@ -1,5 +1,5 @@
 import React from 'react'
-import { ClientDistributionChart, SubscriptionBreakdown, RecentTicketsTable } from '../shared'
+import { ClientDistributionChart, SubscriptionBreakdown, RecentTicketsTable } from '../components'
 import { FaUser } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
 import {tickets} from '../constants'

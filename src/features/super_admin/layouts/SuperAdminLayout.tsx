@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {useDispatch, useSelector} from "react-redux";
+import { toggleAddUser } from "../redux/uiSlice";
 import { Outlet } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
@@ -22,6 +24,9 @@ export function SuperAdminLayout() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [isNotificationOpen, setNotificationOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const dispatch = useDispatch();
+    const addUser = useSelector((state: any) => state.superAdminUi.addUser);
 
     return (
         <div className="flex w-screen h-screen overflow-hidden bg-[#FAF8F2]">

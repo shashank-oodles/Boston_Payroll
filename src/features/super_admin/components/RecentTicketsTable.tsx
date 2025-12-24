@@ -105,7 +105,7 @@ export function RecentTicketsTable({ data }: Props) {
                     <div className="
                         flex items-center px-2 py-1.5 gap-2 text-sm
                         border border-gray-200 rounded-md
-                        focus-within:ring-2 focus-within:ring-orange-400
+                        focus-within:ring-1 focus-within:ring-orange-400
                         focus-within:border-orange-400
                         ">
                         <IoSearch className="text-xl text-gray-400" />

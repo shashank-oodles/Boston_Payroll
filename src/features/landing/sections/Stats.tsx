@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Stats() {
     return (
-        <div className="absolute right-0 mb-16 w-full px-4 h-60">
+        <div className="lg:absolute right-0 mb-16 w-full px-4 h-60">
             <div className="flex flex-col relative lg:flex-row justify-between items-center gap-4 lg:gap-6 max-w-7xl mx-auto">
                 {/* Left Stats */}
-                <div className="absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 top-5">
+                <div className="lg:absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 top-5">
                     <div className="flex items-center space-x-3 mb-2">
                         <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#EC6016' }}>
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +29,7 @@ export default function Stats() {
                 </div>
 
                 {/* Right Stats */}
-                <div className="absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 right-2 top-5">
+                <div className="lg:absolute bg-white rounded-xl p-4 lg:p-6 shadow-lg border border-gray-100 right-2 top-5">
                     <div className="text-center lg:text-right">
                         <div className="flex items-center justify-center lg:justify-end space-x-2 text-sm text-gray-500 mb-1">
                             <span>1-2 Day Deposits</span>

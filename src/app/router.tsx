@@ -10,7 +10,7 @@ import {
   TwoFactorAuth,
   AuthLayout,
 } from "../features/auth";
-import { Dashboard, SuperAdminLayout } from "../features/super_admin";
+import { Dashboard, SuperAdminLayout, UserManagement } from "../features/super_admin";
 
 export const router = createBrowserRouter([
   {
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
       { path: "invoice", element: <Dashboard /> },
       { path: "subscription", element: <Dashboard /> },
       { path: "document-management", element: <Dashboard /> },
-      { path: "user-management", element: <Dashboard /> },
+      { path: "user-management", element: <UserManagement /> },
       { path: "taxes", element: <Dashboard /> },
       { path: "settings", element: <Dashboard /> },
     ],

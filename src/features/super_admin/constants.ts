@@ -1,4 +1,5 @@
 import type { Ticket, Notifications } from "./types";
+import type { User } from "./types";
 
 export const SubscriptionBreakdownData = [
     { name: "Simple", value: 120, color: "#065F5B" },
@@ -245,3 +246,96 @@ export const notifications: Notifications[] = [
             timestamp: "5 hours ago"
         }
     ];
+
+export const users: User[] = [
+  {
+    id: "UID-1034",
+    name: "Mike Willer",
+    email: "mike@bostonpayroll.com",
+    role: "Payroll Manager",
+    client: "Bluewave Retail",
+    status: "Active",
+    lastLogin: "Jul 29 - 11:10 AM",
+  },
+  {
+    id: "UID-1035",
+    name: "Rahul Menon",
+    email: "rahul@bostonpayroll.com",
+    role: "HR Admin",
+    client: "Liberty Healthcare",
+    status: "Active",
+    lastLogin: "Jul 28 - 04:02 PM",
+  },
+  {
+    id: "UID-1036",
+    name: "Juliet Owens",
+    email: "juliet@bostonpayroll.com",
+    role: "Client Admin",
+    client: "Greenfield Finance",
+    status: "Active",
+    lastLogin: "Jul 29 - 09:14 AM",
+  },
+  {
+    id: "UID-1037",
+    name: "Carlos Mejia",
+    email: "carlos@bostonpayroll.com",
+    role: "Accountant",
+    client: "Bright Solutions LLC",
+    status: "Inactive",
+    lastLogin: "Jul 27 - 03:30 PM",
+  },
+  {
+    id: "UID-1038",
+    name: "Fiona Maseko",
+    email: "fiona@bostonpayroll.com",
+    role: "HR Specialist",
+    client: "Silverlake Technologies",
+    status: "Active",
+    lastLogin: "Jul 29 - 10:30 AM",
+  },
+  {
+    id: "UID-1039",
+    name: "Li Wei",
+    email: "li.wei@bostonpayroll.com",
+    role: "Payroll Coordinator",
+    client: "Horizon Contractors",
+    status: "Pending",
+    lastLogin: "Jul 28 - 07:47 AM",
+  },
+  {
+    id: "UID-1040",
+    name: "Dipo Adeniran",
+    email: "dipo@bostonpayroll.com",
+    role: "Finance Manager",
+    client: "Redwood Logistics",
+    status: "Inactive",
+    lastLogin: "Jul 18 - 05:40 PM",
+  },
+  {
+    id: "UID-1041",
+    name: "Clara King",
+    email: "clara@bostonpayroll.com",
+    role: "Subscription Owner",
+    client: "Apex Hospitality",
+    status: "Pending",
+    lastLogin: "Jul 29 - 08:15 AM",
+  },
+  {
+    id: "UID-1042",
+    name: "Ethan Brooks",
+    email: "ethan@bostonpayroll.com",
+    role: "Payroll Analyst",
+    client: "Northstar Manufacturing",
+    status: "Active",
+    lastLogin: "Jul 30 - 09:05 AM",
+  },
+  {
+    id: "UID-1043",
+    name: "Sara Ahmed",
+    email: "sara@bostonpayroll.com",
+    role: "Compliance Officer",
+    client: "Union Financial Group",
+    status: "Active",
+    lastLogin: "Jul 30 - 11:45 AM",
+  },
+];
