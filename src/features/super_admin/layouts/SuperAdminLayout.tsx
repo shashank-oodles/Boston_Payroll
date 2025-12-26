@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import { toggleAddUser } from "../redux/uiSlice";
 import { Outlet } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -25,7 +25,6 @@ export function SuperAdminLayout() {
     const [isNotificationOpen, setNotificationOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
-    const dispatch = useDispatch();
     const addUser = useSelector((state: any) => state.superAdminUi.addUser);
 
     return (
@@ -155,7 +154,7 @@ export function SuperAdminLayout() {
                 </div>
 
                 {/* Page Content */}
-                <div className="flex-1 overflow-auto p-4">
+                <div className={`relative flex-1 overflow-auto ${addUser ? "p-0" : "p-4"}`}>
                     <Outlet />
                 </div>
             </div>

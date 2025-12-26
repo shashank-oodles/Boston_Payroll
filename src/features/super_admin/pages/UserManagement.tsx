@@ -6,7 +6,7 @@ import { MdAdd } from "react-icons/md";
 
 export function UserManagement() {
     const dispatch = useDispatch();
-    const addUser = useSelector((state: any) => state.superAdminUi.value);
+    const addUser = useSelector((state: any) => state.superAdminUi.addUser);
 
     return (
         <div className="flex flex-col gap-4">
@@ -24,7 +24,7 @@ export function UserManagement() {
             <UserStatusTabs />
             <UserTableToolbar />
             <UserTable data={users} />
-            {addUser && <AddUser />}
+            {addUser && <AddUser onClose={() => dispatch(toggleAddUser())} />}
         </div>
     );
 }
