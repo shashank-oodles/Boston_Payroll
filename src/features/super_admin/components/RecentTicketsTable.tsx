@@ -93,7 +93,7 @@ export function RecentTicketsTable({ data }: Props) {
     });
 
     return (
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div className="bg-white rounded-xl p-3 sm:p-6 shadow-sm border border-gray-100">
             {/* Header + Controls */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
                 <h3 className="text-sm font-semibold text-gray-800">
@@ -127,55 +127,58 @@ export function RecentTicketsTable({ data }: Props) {
             </div>
 
             {/* Table */}
-            <div className="max-h-[70vh] overflow-x-auto rounded-lg border-1 border-gray-200">
-                <table className="w-full text-sm">
-                    <thead className="border-b border-gray-200 bg-gray-50">
-                        {table.getHeaderGroups().map(headerGroup => (
-                            <tr key={headerGroup.id}>
-                                {headerGroup.headers.map(header => (
-                                    <th
-                                        key={header.id}
-                                        onClick={header.column.getToggleSortingHandler()}
-                                        className="text-left py-2 px-2 text-xs font-medium text-gray-500 cursor-pointer select-none"
-                                    >
-                                        <div className="flex items-center gap-1">
-                                            {flexRender(
-                                                header.column.columnDef.header,
-                                                header.getContext()
-                                            )}
-                                            <span className="text-gray-400 text-xs">
-                                                {header.column.getIsSorted() === "asc" && "↑"}
-                                                {header.column.getIsSorted() === "desc" && "↓"}
-                                                {!header.column.getIsSorted() && "↕"}
-                                            </span>
-                                        </div>
-                                    </th>
-                                ))}
-                            </tr>
-                        ))}
-                    </thead>
+            <div className="overflow-x-auto -mx-3 sm:mx-0">
 
-                    <tbody>
-                        {table.getRowModel().rows.map(row => (
-                            <tr
-                                key={row.id}
-                                className="border-b border-gray-200 last:border-none hover:bg-gray-50"
-                            >
-                                {row.getVisibleCells().map(cell => (
-                                    <td
-                                        key={cell.id}
-                                        className="py-2.5 px-2 text-sm text-gray-700"
-                                    >
-                                        {flexRender(
-                                            cell.column.columnDef.cell,
-                                            cell.getContext()
-                                        )}
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className="max-h-[70vh] overflow-x-auto rounded-lg border-1 border-gray-200">
+                    <table className="w-full text-sm">
+                        <thead className="border-b border-gray-200 bg-gray-50">
+                            {table.getHeaderGroups().map(headerGroup => (
+                                <tr key={headerGroup.id}>
+                                    {headerGroup.headers.map(header => (
+                                        <th
+                                            key={header.id}
+                                            onClick={header.column.getToggleSortingHandler()}
+                                            className="text-left py-2 px-2 text-xs font-medium text-gray-500 cursor-pointer select-none"
+                                        >
+                                            <div className="flex items-center gap-1">
+                                                {flexRender(
+                                                    header.column.columnDef.header,
+                                                    header.getContext()
+                                                )}
+                                                <span className="text-gray-400 text-xs">
+                                                    {header.column.getIsSorted() === "asc" && "↑"}
+                                                    {header.column.getIsSorted() === "desc" && "↓"}
+                                                    {!header.column.getIsSorted() && "↕"}
+                                                </span>
+                                            </div>
+                                        </th>
+                                    ))}
+                                </tr>
+                            ))}
+                        </thead>
+
+                        <tbody>
+                            {table.getRowModel().rows.map(row => (
+                                <tr
+                                    key={row.id}
+                                    className="border-b border-gray-200 last:border-none hover:bg-gray-50"
+                                >
+                                    {row.getVisibleCells().map(cell => (
+                                        <td
+                                            key={cell.id}
+                                            className="py-2.5 px-2 text-sm text-gray-700"
+                                        >
+                                            {flexRender(
+                                                cell.column.columnDef.cell,
+                                                cell.getContext()
+                                            )}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

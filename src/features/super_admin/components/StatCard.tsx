@@ -1,11 +1,11 @@
 import type { StatCardProps } from "../types";
 
-export function StatCardProps({
+export function StatCard({
   label,
   value,
   description,
   accent = "orange",
-  icon
+  icon: Icon
 }: StatCardProps) {
   const accentStyles: Record<typeof accent, string> = {
     orange: "text-orange-500 bg-orange-100",
@@ -13,8 +13,6 @@ export function StatCardProps({
     blue: "text-blue-600 bg-blue-100",
     red: "text-red-600 bg-red-100",
   };
-
-  const Icon = icon;
 
   return (
     <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex flex-col gap-2">

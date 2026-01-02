@@ -11,14 +11,14 @@ import { ClientDistributionData } from "../constants";
 
 const data = ClientDistributionData
 
-export function ClientDistributionChart({className}: {className?: string}) {
+export function ClientDistributionChart() {
   return (
-    <div className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 ${className}`}>
-      <h3 className="text-sm font-semibold text-gray-800 mb-4">
+    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
+      <h3 className="text-sm font-semibold text-gray-800 mb-3">
         Client Distribution
       </h3>
 
-      <div className="h-[20rem]">
+      <div className="h-[16rem] sm:h-[20rem]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}

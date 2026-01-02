@@ -10,14 +10,14 @@ const data = SubscriptionBreakdownData
 
 const total = data.reduce((sum, d) => sum + d.value, 0);
 
-export function SubscriptionBreakdown({className}: {className?: string}) {
+export function SubscriptionBreakdown() {
   return (
-    <div className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 ${className}`}>
-      <h3 className="text-sm font-semibold text-gray-800 mb-4">
+    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
+      <h3 className="text-sm font-semibold text-gray-800 mb-3">
         Subscription Breakdown
       </h3>
 
-      <div className="h-[260px] flex items-center justify-center">
+      <div className="h-[240px]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -58,8 +58,7 @@ export function SubscriptionBreakdown({className}: {className?: string}) {
         </ResponsiveContainer>
       </div>
 
-      {/* Labels */}
-      <div className="mt-4 flex justify-between text-sm">
+      <div className="mt-4 grid grid-cols-3 text-sm">
         {data.map(item => (
           <div key={item.name} className="text-center">
             <p className="text-gray-500">{item.name}</p>

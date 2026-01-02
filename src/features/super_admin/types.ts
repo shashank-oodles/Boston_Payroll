@@ -13,9 +13,10 @@ export type Ticket = {
 };
 
 export type Notifications = {
-  headline: string;
-  content: string;
-  timestamp: string;
+  id: string;
+  title: string;
+  description: string;
+  time: string;
 }
 
 export type UserStatus = "Active" | "Inactive" | "Pending";

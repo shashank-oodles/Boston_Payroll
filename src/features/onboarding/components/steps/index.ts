@@ -1,0 +1,6 @@
+export {StepAccountant} from './StepAccountant'
+export {StepIndustry} from './StepIndustry'
+export {StepPayrollStatus} from './StepPayrollStatus'
+export {StepWhoYouPay} from './StepWhoYouPay'
+export {StepBusinessEntity} from './StepBusinessEntity'
+export {StepHelp} from './StepHelp'

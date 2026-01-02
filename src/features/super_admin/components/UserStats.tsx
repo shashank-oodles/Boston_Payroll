@@ -1,4 +1,4 @@
-import { StatCardProps } from './StatCardProps';
+import { StatCard } from './StatCard';
 import { HiUsers } from "react-icons/hi2";
 import { ImUserCheck } from "react-icons/im";
 import { HiMiniUserPlus } from "react-icons/hi2";
@@ -6,8 +6,8 @@ import { FaUserSlash } from "react-icons/fa6";
 
 export function UserStats() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      <StatCardProps
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <StatCard
         label="Total Users"
         value={324}
         description="All users across payroll clients and internal roles."
@@ -15,7 +15,7 @@ export function UserStats() {
         icon={HiUsers}
       />
 
-      <StatCardProps
+      <StatCard
         label="Active Users (Last 7 Days)"
         value={217}
         description="Users who logged in or performed actions recently."
@@ -23,7 +23,7 @@ export function UserStats() {
         icon={ImUserCheck}
       />
 
-      <StatCardProps
+      <StatCard
         label="New Users This Month"
         value={42}
         description="Users added or activated this calendar month."
@@ -31,7 +31,7 @@ export function UserStats() {
         icon={HiMiniUserPlus}
       />
 
-      <StatCardProps
+      <StatCard
         label="Inactive Users"
         value={14}
         description="Users with no platform activity or blocked access."

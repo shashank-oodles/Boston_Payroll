@@ -10,7 +10,8 @@ import {
   TwoFactorAuth,
   AuthLayout,
 } from "../features/auth";
-import { Dashboard, SuperAdminLayout, UserManagement } from "../features/super_admin";
+import { Dashboard, UserManagement } from "../features/super_admin";
+import { AppLayout } from "../features/layout";
 
 export const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/super-admin",
-    element: <SuperAdminLayout />,
+    element: <AppLayout />,
     children: [
       { index: true, element: <Navigate to="dashboard" replace /> },
       { path: "dashboard", element: <Dashboard /> },

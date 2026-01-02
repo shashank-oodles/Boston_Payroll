@@ -7,3 +7,10 @@ export {UserTableToolbar} from './UserTableToolbar';
 export {UserStats} from './UserStats';
 export {UserStatusTabs} from './UserStatusTabs';
 export {AddUser} from './AddUser';
+export {StatCard} from './StatCard'
+export {TicketCard} from './TicketCard'
+export {UserCardList} from './UserCardList'
+export {LanguageSwitcher} from '../../shared/components/LanguageSwitcher'
+export {UserProfileDropdown} from '../../shared/components/UserProfileDropdown'
+export {NotificationsPanel} from './NotificationsPanel'
+export {NotificationBell} from '../../shared/components/NotificationBell'
