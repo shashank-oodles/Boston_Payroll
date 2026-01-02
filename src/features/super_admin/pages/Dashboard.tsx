@@ -9,15 +9,11 @@ import {
 } from "../components";
 import { FaUser, FaUserCircle } from "react-icons/fa";
 import { tickets } from "../constants";
-import { OnboardingModal } from "../../onboarding/components/OnboardingModal";
 
 export function Dashboard() {
 
-  const [showOnboarding, setShowOnboarding] = useState(true);
-
   return (
     <div className="flex flex-col gap-4 px-2 sm:px-0 max-w-full overflow-x-hidden">
-      {showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} />}
       {/* Header */}
       <div>
         <h1 className="text-xl sm:text-2xl font-bold text-gray-700">

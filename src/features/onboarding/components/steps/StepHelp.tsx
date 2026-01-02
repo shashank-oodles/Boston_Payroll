@@ -25,7 +25,7 @@ export function StepHelp() {
                         <input
                             type="checkbox"
                             value={opt}
-                            {...register("workerTypes")}
+                            {...register("helpTypes")}
                             className="mt-1 accent-orange-500"
                         />
                         <span className="inline-block text-sm font-semibold text-gray-800">

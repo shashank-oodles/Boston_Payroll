@@ -15,6 +15,7 @@ export function OnboardingModal({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
+    console.log(STEPS.length)
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
@@ -23,7 +24,7 @@ export function OnboardingModal({ onClose }: { onClose: () => void }) {
 
   const onSubmit = (data: OnboardingData) => {
     console.log("FINAL DATA", data);
-    onClose(); // later → dispatch to Redux
+    onClose();
   };
 
   const StepComponent = useMemo(() => {
@@ -36,7 +37,6 @@ export function OnboardingModal({ onClose }: { onClose: () => void }) {
       StepHelp
     ][step];
   }, [step]);
-
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center px-4">
@@ -76,22 +76,22 @@ export function OnboardingModal({ onClose }: { onClose: () => void }) {
                 </button>
               )}
 
-              {step < STEPS.length - 1 ? (
-                <button
-                  type="button"
-                  onClick={() =>
-                    {console.log(step); setStep(s => (s + 1))}
-                  }
-                  className="flex-1 bg-orange-500 text-white py-2 rounded-lg"
-                >
-                  Continue
-                </button>
-              ) : (
+              {step === STEPS.length - 1 ? (
                 <button
                   type="submit"
                   className="flex-1 bg-orange-500 text-white py-2 rounded-lg"
                 >
                   Submit
+                </button>
+
+              ) : (
+                <button
+                  type="button"
+                  onClick={(e) => {e.preventDefault();  setStep(s => (s + 1)); }
+                  }
+                  className="flex-1 bg-orange-500 text-white py-2 rounded-lg"
+                >
+                  Continue
                 </button>
               )}
             </div>
