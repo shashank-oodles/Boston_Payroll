@@ -3,7 +3,8 @@ import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { NAVIGATION } from "../shared/config/roles";
 import { Sidebar, MobileSidebar, Header } from "../shared/components/index";
-import type { Role } from "../shared/types"; // import the Role type
+import type { Role } from "../shared/types";
+import {OnboardingModal} from "../onboarding/components/OnboardingModal";
 
 export function AppLayout() {
     //   const role = useSelector((state: any) => state.auth.role) as Role; // SUPER_ADMIN | ADMIN
@@ -12,6 +13,7 @@ export function AppLayout() {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+    const [showOnboarding, setShowOnboarding] = useState(true);
 
     useEffect(() => {
         document.body.style.overflow = isMobileSidebarOpen ? "hidden" : "";
@@ -24,6 +26,7 @@ export function AppLayout() {
 
     return (
         <div className="flex w-screen h-screen overflow-hidden bg-[#FAF8F2]">
+            {(role==="SUPER_ADMIN" && showOnboarding) && <OnboardingModal onClose={() => setShowOnboarding(false)} />}
             {isMobileSidebarOpen && (
                 <MobileSidebar
                     items={navItems}

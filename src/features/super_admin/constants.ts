@@ -13,6 +13,11 @@ export const ClientDistributionData = [
     { state: "Texas", clients: 10 },
     { state: "California", clients: 8 },
     { state: "Illinois", clients: 5 },
+    { state: "Washington", clients: 4 },
+    { state: "Nevada", clients: 3 },    
+    { state: "Oregon", clients: 2 },
+    { state: "Utah", clients: 2 },
+    { state: "Arizona", clients: 1 },
 ];
 
 // tickets
